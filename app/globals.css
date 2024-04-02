@@ -1,33 +1,225 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Adding styles to globals.css or a component-specific CSS file */
+
+.header {
+  display: flex;
+  flex-direction: column; /* Change to row for horizontal layout */
+  align-items: center; /* Align items for vertical layout, change to flex-start for horizontal */
+  width: 100%;
+  box-shadow: 1px -2px 20px 0 #b3b3b3;
+}
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --bs-blue: #0d6efd;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+  --bs-red: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+  --bs-green: #198754;
+  --bs-teal: #20c997;
+  --bs-cyan: #0dcaf0;
+  --bs-black: #000;
+  --bs-white: #fff;
+  --bs-gray: #798490;
+  --bs-gray-dark: #4a545b;
+  --bs-gray-100: #f9f9f9;
+  --bs-gray-200: #eee;
+  --bs-gray-300: #bcc1c7;
+  --bs-gray-400: #ced4da;
+  --bs-gray-500: #adb5bd;
+  --bs-gray-600: #798490;
+  --bs-gray-700: #495057;
+  --bs-gray-800: #4a545b;
+  --bs-gray-900: #212529;
+  --bs-primary: #2b3136;
+  --bs-secondary: #3d444d;
+  --bs-success: #3cc261;
+  --bs-info: #26b6cf;
+  --bs-warning: #ffbd5d;
+  --bs-danger: #e52427;
+  --bs-light: #f9f9f9;
+  --bs-dark: #4a545b;
+  --bs-primary-rgb: 43, 49, 54;
+  --bs-secondary-rgb: 61, 68, 77;
+  --bs-success-rgb: 60, 194, 97;
+  --bs-info-rgb: 38, 182, 207;
+  --bs-warning-rgb: 255, 189, 93;
+  --bs-danger-rgb: 229, 36, 39;
+  --bs-light-rgb: 249, 249, 249;
+  --bs-dark-rgb: 74, 84, 91;
+  --bs-white-rgb: 255, 255, 255;
+  --bs-black-rgb: 0, 0, 0;
+  --bs-body-color-rgb: 43, 49, 54;
+  --bs-body-bg-rgb: 255, 255, 255;
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --bs-body-font-family: Inter, sans-serif;
+  --bs-body-font-size: 0.875rem;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 1.5;
+  --bs-body-color: #2b3136;
+  --bs-body-bg: #fff;
+  --bs-border-width: 1px;
+  --bs-border-style: solid;
+  --bs-border-color: #798490;
+  --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
+  --bs-border-radius: 0;
+  --bs-border-radius-sm: 0;
+  --bs-border-radius-lg: 0;
+  --bs-border-radius-xl: 1rem;
+  --bs-border-radius-2xl: 2rem;
+  --bs-border-radius-pill: 50rem;
+  --bs-link-color: #2b3136;
+  --bs-link-hover-color: #22272b;
+  --bs-code-color: #d63384;
+  --bs-highlight-bg: #fff3cd;
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-body-color);
+  text-align: var(--bs-body-text-align);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-feature-settings: "cv02" 1, "cv03" 1, "cv04" 1;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+  font-family: "Asap", sans-serif !important;
+  overflow: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+
+.main-navigation {
+  display: flex;
+  flex-direction: row; /* Change to row for horizontal layout */
+  font-weight: 600;
+  gap: 20px; /* Adjust the gap between links */
+  padding: 1rem;
+  justify-content: center; /* Center items horizontally */
 }
 
+.header-link {
+  text-decoration: none;
+  color: var(--bs-link-color); /* Use the color variable for text color */
+  padding: 0.5rem 1rem; /* Adjust padding as needed */
+  font-weight: 550; /* Using variable for font weight */
+  line-height: var(--bs-body-line-height); /* Using variable for line height */
+  text-align: var(--bs-body-text-align); /* Align text as per variable */
+  font-family: "Asap", sans-serif; /* Specifying the font family */
+  font-size: 16px; /* Adjust font size as needed */
+  transition: color 0.3s ease-in-out; /* Smooth transition for hover effect */
+  color: var(--bs-link-color);
+}
+
+.header-link:hover, .nav-link:focus {
+  color: var(--bs-link-hover-color); /* Change text color on hover/focus */
+  text-decoration: underline; /* Optional: underline text on hover/focus */
+}
+
+
+/* Additional styling for links and hover states */
+.nav-link {
+  text-decoration: none;
+  color: var(--bs-link-color); /* Use the color variable for text color */
+  padding: 0.5rem 1rem; /* Adjust padding as needed */
+  font-weight: var(--bs-body-font-weight); /* Using variable for font weight */
+  line-height: var(--bs-body-line-height); /* Using variable for line height */
+  text-align: var(--bs-body-text-align); /* Align text as per variable */
+  font-family: "Asap", sans-serif; /* Specifying the font family */
+  font-size: 16px; /* Adjust font size as needed */
+  transition: color 0.3s ease-in-out; /* Smooth transition for hover effect */
+  color: var(--bs-link-color);
+}
+
+.nav-link:hover, .nav-link:focus {
+  color: var(--bs-link-hover-color); /* Change text color on hover/focus */
+  text-decoration: underline; /* Optional: underline text on hover/focus */
+}
+
+
+.logo-container {
+  margin-bottom: 0; /* Adjust or remove for horizontal layout */
+}
+
+/* You may need to adjust this depending on your layout */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.column {
+  width: calc(60% - 20px); /* Adjust the width as needed */
+  display: inline-block;
+  vertical-align: top; /* Align columns to the top */
+  margin-right: 10px; /* Adjust the right margin to create spacing between columns */
+}
+
+.column:last-child {
+  margin-right: 0;
+}
+
+
+/* Body and universal styles adapted from your reference */
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: var(--bs-body-font-family, "Asap"), sans-serif !important;
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg) !important;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Removes bullet points and default padding/margin from the list */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
+
+/* Styles for the list items */
+li {
+  margin-bottom: 0; /* Adjust the space between items */
+}
+
+/* If you're using a CSS module, remember to import and use the styles object instead */
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.footer {
+  margin-top: auto; /* Push the footer to the bottom */
+  background-color: #f9f9f9; /* Light grey background */
+  padding: 20px 0; /* Padding on top and bottom */
+  text-align: center; /* Center the content horizontally */
+  width: 100%;
+}
+
+.footer-links {
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+  margin: 0 auto; /* Center the list in the footer */
+  display: flex; /* Use flexbox to align links */
+  justify-content: center; /* Center links horizontally */
+  align-items: center; /* Center links vertically */
+}
+
+.footer-link {
+  color: var(--bs-dark); /* Use a dark color for the links */
+  text-decoration: none; /* No underline by default */
+  margin: 0 10px; /* Space out the links */
+}
+
+.footer-link:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
