@@ -25,7 +25,7 @@ const Home: React.FC = () => {
       { name: "Spain", url: "https://www.vomfass-barcelona.com/" },
       { name: "Belgium", url: "https://vomfass-slijterij.nl/" },
       { name: "Netherlands", url: "https://vomfass-slijterij.nl/"},
-      { name: "United Kingdom", url: "https://www.vomfassuk.com"}
+      { name: "United Kingdom / Ireland", url: "https://www.vomfassuk.com"}
     ],
     "North America": [
       { name: "United States", url: "https://www.vomfassusa.com/" }
@@ -34,7 +34,10 @@ const Home: React.FC = () => {
       { name: "Brasil", url: "https://www.vomfass.com.br/"}
     ],
     "Asia": [
-      { name: "Korea", url: "https://m.vomfasskorea.com/" }
+      { name: "South Korea", url: "https://vomfasskorea.com/" },
+      { name: "Hong Kong", url: "https://www.vomfass.com.hk/"},
+      { name: "Singapore", url: "https://www.vomfass.com.sg/"},
+      { name: "Israel", url: "https://www.vomfass.co.il/"}
     ]
   };
 
